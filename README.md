@@ -354,7 +354,6 @@ Response:
 ├── Dockerfile             # Docker image configuration
 ├── docker-compose.yml     # Docker Compose setup
 ├── init.sql               # Database initialization script
-├── .env.example           # Environment variables template
 └── README.md              # This file
 ```
 
