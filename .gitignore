@@ -15,3 +15,5 @@ Gemfile.lock
 .dat*
 .repl_history
 .DS_Store
+.env.example
+VALIDATION.md
