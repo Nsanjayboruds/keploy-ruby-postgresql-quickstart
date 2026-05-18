@@ -118,7 +118,7 @@ post '/books' do
     halt 400, json({ error: 'ISBN must be 13 characters or less' })
   end
   
-  if published_year && (published_year !~ /^\d+$/ || published_year.to_i < 0)
+  if published_year && (published_year.to_s !~ /^\d+$/ || published_year.to_i < 0)
     halt 400, json({ error: 'Published year must be a non-negative integer' })
   end
   
@@ -172,11 +172,11 @@ put '/books/:id' do
   published_year = request_body['published_year']
   
   # Validate fields if provided
-  if title !== nil && title.strip.empty?
+  if title != nil && title.strip.empty?
     halt 400, json({ error: 'Title cannot be empty' })
   end
   
-  if author !== nil && author.strip.empty?
+  if author != nil && author.strip.empty?
     halt 400, json({ error: 'Author cannot be empty' })
   end
   
@@ -184,7 +184,7 @@ put '/books/:id' do
     halt 400, json({ error: 'ISBN must be 13 characters or less' })
   end
   
-  if published_year && (published_year !~ /^\d+$/ || published_year.to_i < 0)
+  if published_year && (published_year.to_s !~ /^\d+$/ || published_year.to_i < 0)
     halt 400, json({ error: 'Published year must be a non-negative integer' })
   end
   
